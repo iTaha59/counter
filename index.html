@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        .main{
+            color: white;
+            margin: auto;
+            padding: 50px 0;
+        }
+        .count,.btns{
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .h1{
+            font-size: 50px;
+            font-family: cursive;
+        }
+        #text{
+            font-size: 150px;
+            font-family: cursive;
+        }
+        #b2{
+            font-size: 80px;
+            border-radius: 100rem;
+            width: 300px;
+            font-family: cursive;
+            background-color: white;
+        }
+        #b1{
+            font-size: 50px;
+            border-radius: 100rem;
+            width: 150px;
+            font-family: cursive;
+            background-color: white;
+        }
+        #b1:hover,#b2:hover{
+            border: none;
+            background-color: rgb(105, 105, 105);
+            color: white;
+            box-shadow: 0 0 20px white;
+            transform: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="count">
+            <h1 class="h1">Counter</h1>
+            <h1 id="text">0</h1>
+        </div>
+        <div class="btns" style="height: 250px;">
+            <div><button onclick="clr()" id="b1">reset</button></div>
+            <div><button onclick="inc()" id="b2">start</button></div>
+        </div>
+    </div>
+    <script>
+        var num = 0;
+        function inc(){
+            num++
+            document.getElementById("text").innerHTML=num;
+        }
+        function clr(){
+            document.getElementById("text").innerHTML=0;
+        }
+    </script>
+</body>
+</html>
